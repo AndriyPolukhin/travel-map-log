@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const { Schema } = mongoose.Schema;
+const { Schema } = mongoose;
 
 // * Re-usable types parameters
 const requiredString = {
@@ -10,12 +10,6 @@ const requiredString = {
 
 const requiredNumber = {
   type: Number,
-  required: true,
-};
-
-const defaultRequiredDate = {
-  type: Date,
-  default: Date.now,
   required: true,
 };
 
@@ -42,8 +36,8 @@ const logEntrySchema = new Schema(
       max: 180,
     },
     visitDate: {
-      required: true,
       type: Date,
+      required: true,
     },
   },
   {
